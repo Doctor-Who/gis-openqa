@@ -337,6 +337,11 @@ elsif (get_var('GNUHEALTH')) {
     loadtest 'gnuhealth/gnuhealth_client_preconfigure';
     loadtest 'gnuhealth/gnuhealth_client_first_time';
 }
+elsif (get_var('APPGEO')) {
+    boot_hdd_image;
+    loadtest 'appgeo/appgeo_install';
+    loadtest 'appgeo/qgis';
+}
 elsif (is_rescuesystem) {
     loadtest "installation/rescuesystem";
     loadtest "installation/rescuesystem_validate_131";

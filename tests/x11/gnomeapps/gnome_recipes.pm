@@ -1,0 +1,26 @@
+# SUSE's openQA tests
+#
+# Copyright © 2017 SUSE LLC
+#
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+# Summary: GNOME Weather - Minimal Test
+# Maintainer: Dominique Leuenberger <dimstar@suse.de>>
+
+use base "x11test";
+use strict;
+use testapi;
+use utils;
+
+sub run {
+    assert_gui_app('gnome-recipes');
+    # assert_gui_app pressed alt-f4 to close the app, but that might have hit only
+    # the '20th aniiversary gift' popup dialog
+    # press again alt-f4, to close the application
+    send_key('alt-f4');
+}
+
+1;

@@ -341,6 +341,7 @@ elsif (get_var('APPGEO')) {
     boot_hdd_image;
     loadtest 'appgeo/appgeo_install';
     loadtest 'appgeo/qgis';
+    loadtest 'appgeo/grass';
 }
 elsif (is_rescuesystem) {
     loadtest "installation/rescuesystem";
